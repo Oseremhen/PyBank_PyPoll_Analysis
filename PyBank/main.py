@@ -23,7 +23,7 @@ budget_data = os.path.join("Resources/budget_data.csv")
 with open(budget_data, 'r') as budget_csv:
     budget_info = list(csv.reader(budget_csv, delimiter= ","))
 
-    for row in range(1,len(budget_info)):
+    for row in range(1,int(len(budget_info))):
         months = months + 1
         current_profit = int(budget_info[row][1])
         net_profit = net_profit + current_profit
@@ -44,7 +44,7 @@ with open(budget_data, 'r') as budget_csv:
             min_month_change = budget_info[row][0]
 
 # calculating average change
-average_change = (sum(change)/months)
+average_change = round(sum(change)/months, 2)
 print(f"{average_change}")
             
 # assign a variable to save the file as txt
@@ -64,7 +64,6 @@ with open(budget_analysis, 'w')as output_file:
                        f"````````````")
 
     print(format(pybank_analysis))
-
 # write your analysis in the created txt file
     with open(budget_analysis, 'w')as output_file:
         output_file.write(pybank_analysis)
