@@ -1,6 +1,4 @@
 # python-challenge
-My Python Assignment
-
 In this assignment, I used the concepts I learnt to complete two Python challenges, PyBank and PyPoll. Both tasks present a real-world situation where my newly developed Python scripting skills come in handy.
 
 In this Challenge, I created a Python script to analyze the financial records of a company. I used a financial dataset "budget_data.csv". The dataset is composed of two columns: "Date" and "Profit/Losses"
